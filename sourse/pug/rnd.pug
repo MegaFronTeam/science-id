@@ -92,16 +92,29 @@ html(lang='ru-RU')
 								h1!=`R&amp;D`
 								p Наша задача в&nbsp;динамике создать полную базу компаний, которые занимаются R&amp;D, от&nbsp;первого лица рассказать, как выстраивается работа учёных с&nbsp;представителями коммерческого сектора. Дать возможность молодым исследователям,&nbsp;&mdash; нашим юным соотечественникам, включиться в&nbsp;работу и&nbsp;реализовать свои смелые, амбициозные идеи в&nbsp;рамках деятельности команд R&amp;D подразделений
 				.container
-					+b.vacancy-person.section
-						+e.block
-							+e.img
-								img(src="img/rnd-image.jpg", alt="")
-							+e.info
-								+e.text &quot; Это страница на&nbsp;портале ScienceID- важный маяк для молодых учёных, ведь абсолютные инновации и&nbsp;уникальные решения&nbsp;&mdash; это &laquo;двигатели&raquo; развития России! &quot;
-								+e.name Александра Глазкова
-								+e.job вице-президент по&nbsp;HR и&nbsp;корпоративному маркетингу биотехнологической компании BIOCAD
+					//- +b.vacancy-person.section
+					//- 	+e.block
+					//- 		+e.img
+					//- 			img(src="img/rnd-image.jpg", alt="")
+					//- 		+e.info
+					//- 			+e.text &quot; Это страница на&nbsp;портале ScienceID- важный маяк для молодых учёных, ведь абсолютные инновации и&nbsp;уникальные решения&nbsp;&mdash; это &laquo;двигатели&raquo; развития России! &quot;
+					//- 			+e.name Александра Глазкова
+					//- 			+e.job вице-президент по&nbsp;HR и&nbsp;корпоративному маркетингу биотехнологической компании BIOCAD
 					+b.map-block
 						h2 Интерактивная карта
+						+e.select-wrap
+							+e.select-block
+								select.select(name="")
+									option(value="0" selected disabled) Выберите отрасль
+									option(value="1") 1
+									option(value="2") 2
+									option(value="3") 3
+							+e.select-block
+								select.select(name="")
+									option(value="0" selected disabled) Регион
+									option(value="1") 1
+									option(value="2") 2
+									option(value="3") 3
 						+e.wrap#map
 					+b.sActualNews.section
 						h2 Актуальные новости

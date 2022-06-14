@@ -1363,6 +1363,31 @@ $primary: #4396f7;
 	.ymaps-2-1-79-copyright {
 		display: none;
 	}
+	&__select-wrap {
+		display: flex;
+		margin-bottom: rem(30);
+		@media screen and (min-width: 992px) {
+			flex-direction: row;
+		}
+		flex-direction: column;
+	}
+	&__select-block {
+		@media screen and (min-width: 992px) {
+			margin-right: rem(30);
+			margin-bottom: 0;
+		}
+		&:last-child {
+			margin-right: 0;
+			margin-bottom: 0;
+		}
+		margin-bottom: rem(30);
+	}
+	.select {
+		width: 100%;
+		@media screen and (min-width: 992px) {
+			width: 270px;
+		}
+	}
 }
 
 .sActualNews {
@@ -1454,7 +1479,7 @@ $primary: #4396f7;
 	}
 	&__line {
 		margin-bottom: rem(12);
-		@media screen and (max-width: 576px){
+		@media screen and (max-width: 576px) {
 			display: flex;
 			flex-direction: column;
 		}
@@ -1473,7 +1498,7 @@ $primary: #4396f7;
 			color: #0284d2;
 			margin-left: rem(32);
 			margin-right: rem(32);
-			@media screen and (max-width: 576px){
+			@media screen and (max-width: 576px) {
 				display: none;
 			}
 		}
@@ -1481,9 +1506,26 @@ $primary: #4396f7;
 			line-height: 160%;
 			font-size: rem(16);
 			color: #2b2b2b;
-			@media screen and (max-width: 576px){
+			@media screen and (max-width: 576px) {
 				margin-top: 8px;
 			}
 		}
 	}
+}
+
+.select {
+	appearance: none;
+	padding-top: rem(16);
+	padding-bottom: rem(16);
+	padding-right: rem(40);
+	padding-left: rem(16);
+	border: 1px solid #d3d3d5;
+	border-radius: 5px;
+	color: #aaaaaa;
+	font-size: rem(14);
+	line-height: calc(17 / 14);
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOSIgdmlld0JveD0iMCAwIDEyIDkiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik02LjIzNTI5IDguODc0NThMMTEuOTQ5NyAwLjQ1NTIyNkMxMi4wMSAwLjM2NjA5NyAxMi4wMTYzIDAuMjUwNTQ4IDExLjk2NzQgMC4xNTUzMjNDMTEuOTE4IDAuMDU5ODA2NCAxMS44MjA5IDAgMTEuNzE0NiAwTDAuMjg1NzIxIDBDMC4xNzk0MzMgMCAwLjA4MjAwMjYgMC4wNTk4MDY0IDAuMDMyNTcyNyAwLjE1NTMyM0MwLjAxMDg1ODUgMC4xOTc3MSAwIDAuMjQ0MTYxIDAgMC4yOTAzMjNDMCAwLjM0ODA5NyAwLjAxNzE0NDIgMC40MDU1ODEgMC4wNTA1NzMzIDAuNDU1MjI2TDUuNzY1IDguODc0NThDNS44MTg0MyA4Ljk1MzI2IDUuOTA2MTQgOSA2LjAwMDE1IDlDNi4wOTQxNSA5IDYuMTgxODYgOC45NTI5NyA2LjIzNTI5IDguODc0NThaTTAuODI5NzM0IDAuNTgwNjQ1TDExLjE3MDMgMC41ODA2NDVMNS45OTk4NiA4LjE5ODQyTDAuODI5NzM0IDAuNTgwNjQ1WiIgZmlsbD0iIzc4Nzg3OCIvPgo8L3N2Zz4K");
+	background-size: 12px 9px;
+	background-repeat: no-repeat;
+	background-position: right 20px top 50%;
 }
